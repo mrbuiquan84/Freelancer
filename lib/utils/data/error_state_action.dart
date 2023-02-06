@@ -1,0 +1,4 @@
+enum ErrorStateActions {
+  rebuild,
+  alert,
+}

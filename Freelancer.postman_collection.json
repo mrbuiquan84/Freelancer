@@ -1,0 +1,1801 @@
+{
+	"info": {
+		"_postman_id": "8790a0e0-5480-420f-9b1f-a24fe9e6c052",
+		"name": "Freelancer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Account",
+			"item": [
+				{
+					"name": "API sau khi đăng nhập",
+					"item": [
+						{
+							"name": "API dự án của freelancer",
+							"item": [
+								{
+									"name": "Get thông tin dự án đã lưu, đang thực hiện",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://freelancer.timviec365.com.vn/api_app/freelancer/loadflcSaveJob?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1SUQiOiIxNTEiLCJlbWFpbCI6ImhhaW5ndXllbi5taWNyb3NvZnRAZ21haWwuY29tIiwidGltZSI6MTYyNTIxNzI0OX0.40FPtmcXwOXiMVUuBH5TeYiCbuqJCJGKZPCmN-TxBbY&page=1&limit=2",
+											"protocol": "https",
+											"host": [
+												"freelancer",
+												"timviec365",
+												"com",
+												"vn"
+											],
+											"path": [
+												"api_app",
+												"freelancer",
+												"loadflcSaveJob"
+											],
+											"query": [
+												{
+													"key": "token",
+													"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1SUQiOiIxNTEiLCJlbWFpbCI6ImhhaW5ndXllbi5taWNyb3NvZnRAZ21haWwuY29tIiwidGltZSI6MTYyNTIxNzI0OX0.40FPtmcXwOXiMVUuBH5TeYiCbuqJCJGKZPCmN-TxBbY"
+												},
+												{
+													"key": "page",
+													"value": "1",
+													"description": "số page"
+												},
+												{
+													"key": "limit",
+													"value": "2",
+													"description": "số bản ghi trong page"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Đặt giá",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "token",
+													"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1SUQiOiIxNTEiLCJlbWFpbCI6ImhhaW5ndXllbi5taWNyb3NvZnRAZ21haWwuY29tIiwidGltZSI6MTYyNTIxNTk4NH0.pHYp6rvWJ8mSUb1R2gdMozCjuOv9qJGfyHQ5aLA7u8Q",
+													"type": "text"
+												},
+												{
+													"key": "job_id",
+													"value": "30",
+													"description": "id công việc cần đặt giá",
+													"type": "text"
+												},
+												{
+													"key": "salary",
+													"value": "5555555",
+													"description": "mức lương mong muốn",
+													"type": "text"
+												},
+												{
+													"key": "flc_email",
+													"value": "aaaaaaaa@gmail.com",
+													"description": "email",
+													"type": "text"
+												},
+												{
+													"key": "day_bid_end",
+													"value": "2030-02-09",
+													"description": "hạn đặt giá",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "https://freelancer.timviec365.com.vn/api_app/freelancer/bidPrince",
+											"protocol": "https",
+											"host": [
+												"freelancer",
+												"timviec365",
+												"com",
+												"vn"
+											],
+											"path": [
+												"api_app",
+												"freelancer",
+												"bidPrince"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Xoá dự án đã lưu",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "https://freelancer.timviec365.com.vn/api_app/freelancer/deleteSaveJob?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1SUQiOiIxNTEiLCJlbWFpbCI6ImhhaW5ndXllbi5taWNyb3NvZnRAZ21haWwuY29tIiwidGltZSI6MTYyNTIxNTk4NH0.pHYp6rvWJ8mSUb1R2gdMozCjuOv9qJGfyHQ5aLA7u8Q&id_job=18",
+											"protocol": "https",
+											"host": [
+												"freelancer",
+												"timviec365",
+												"com",
+												"vn"
+											],
+											"path": [
+												"api_app",
+												"freelancer",
+												"deleteSaveJob"
+											],
+											"query": [
+												{
+													"key": "token",
+													"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1SUQiOiIxNTEiLCJlbWFpbCI6ImhhaW5ndXllbi5taWNyb3NvZnRAZ21haWwuY29tIiwidGltZSI6MTYyNTIxNTk4NH0.pHYp6rvWJ8mSUb1R2gdMozCjuOv9qJGfyHQ5aLA7u8Q"
+												},
+												{
+													"key": "id_job",
+													"value": "18",
+													"description": "id dự án đã lưu"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Set trạng thái công việc",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "token",
+													"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1SUQiOiIxNTEiLCJlbWFpbCI6ImhhaW5ndXllbi5taWNyb3NvZnRAZ21haWwuY29tIiwidGltZSI6MTYyNTIxODE1Mn0.AMFA7wJdPU-iJu9usbOm_EaGjvG07cvd7k8JUCF1hLc",
+													"type": "text"
+												},
+												{
+													"key": "id_job",
+													"value": "25",
+													"description": "id dự án",
+													"type": "text"
+												},
+												{
+													"key": "status",
+													"value": "1",
+													"description": "trạng thái: 0 - ko hoàn thành, 1 - đã hoàn thành, 2- đang thực hiện",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "https://freelancer.timviec365.com.vn/api_app/freelancer/setStatusWork",
+											"protocol": "https",
+											"host": [
+												"freelancer",
+												"timviec365",
+												"com",
+												"vn"
+											],
+											"path": [
+												"api_app",
+												"freelancer",
+												"setStatusWork"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Freelancer đánh giá công việc",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "token",
+													"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1SUQiOiI4NSIsImVtYWlsIjoiaGFpeHl6QGdtYWlsLmNvbSIsInRpbWUiOjE2MjQ2NzU4Mzh9.v8ZGLenLJ8xxdLQ0fHdXl5oDrX9onuXRqdY-A9nR9Ro",
+													"type": "text"
+												},
+												{
+													"key": "id_job",
+													"value": "15",
+													"description": "id công việc ",
+													"type": "text"
+												},
+												{
+													"key": "star",
+													"value": "1",
+													"description": "số sao",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "https://freelancer.timviec365.com.vn/api_app/freelancer/freelancerVoteJob",
+											"protocol": "https",
+											"host": [
+												"freelancer",
+												"timviec365",
+												"com",
+												"vn"
+											],
+											"path": [
+												"api_app",
+												"freelancer",
+												"freelancerVoteJob"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Freelancer lưu việc",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "token",
+													"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1SUQiOiIxNTIiLCJlbWFpbCI6ImhhaW5ndXllbi5taWNyb3NvZnRAZ21haWwuY29tIiwidGltZSI6MTYyNTI5NjM3OX0.wWAKxS0veIB0I2v3PNn3KNp8NU9ZyXQZGwXd62_Uexk",
+													"type": "text"
+												},
+												{
+													"key": "job_id",
+													"value": "40",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "https://freelancer.timviec365.com.vn/api_app/freelancer/flcSavedJobs",
+											"protocol": "https",
+											"host": [
+												"freelancer",
+												"timviec365",
+												"com",
+												"vn"
+											],
+											"path": [
+												"api_app",
+												"freelancer",
+												"flcSavedJobs"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Freelancer đổi mật khẩu",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1SUQiOiIxNTEiLCJlbWFpbCI6ImhhaW5ndXllbi5taWNyb3NvZnRAZ21haWwuY29tIiwidGltZSI6MTYyNTIxNTk4NH0.pHYp6rvWJ8mSUb1R2gdMozCjuOv9qJGfyHQ5aLA7u8Q",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "222222",
+											"description": "mật khẩu cũ",
+											"type": "text"
+										},
+										{
+											"key": "newpassword",
+											"value": "922000",
+											"description": "mật khẩu mới",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://freelancer.timviec365.com.vn/api_app/freelancer/changePassFLC",
+									"protocol": "https",
+									"host": [
+										"freelancer",
+										"timviec365",
+										"com",
+										"vn"
+									],
+									"path": [
+										"api_app",
+										"freelancer",
+										"changePassFLC"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get thông tin user",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "freelancer.timviec365.com.vn/api_app/freelancer/loadInfo?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1SUQiOiIyNTMiLCJlbWFpbCI6ImhhdHVhbmRlcHRyYWkyMDAxQGdtYWlsLmNvbSIsInRpbWUiOjE2MjYzNDM1MDV9.zKjxLmEP1zQeekHlxHq0FkVmPPf4oE4I5I4KTG8vkXo",
+									"host": [
+										"freelancer",
+										"timviec365",
+										"com",
+										"vn"
+									],
+									"path": [
+										"api_app",
+										"freelancer",
+										"loadInfo"
+									],
+									"query": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1SUQiOiIyNTMiLCJlbWFpbCI6ImhhdHVhbmRlcHRyYWkyMDAxQGdtYWlsLmNvbSIsInRpbWUiOjE2MjYzNDM1MDV9.zKjxLmEP1zQeekHlxHq0FkVmPPf4oE4I5I4KTG8vkXo"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cập nhật thông tin cơ bản",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1SUQiOiIxNTEiLCJlbWFpbCI6ImhhaW5ndXllbi5taWNyb3NvZnRAZ21haWwuY29tIiwidGltZSI6MTYyNTIxNTk4NH0.pHYp6rvWJ8mSUb1R2gdMozCjuOv9qJGfyHQ5aLA7u8Q",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Hoa Hoa",
+											"type": "text"
+										},
+										{
+											"key": "birthday",
+											"value": "21-02-2000",
+											"type": "text"
+										},
+										{
+											"key": "sex",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "city",
+											"value": "11",
+											"type": "text"
+										},
+										{
+											"key": "district",
+											"value": "111",
+											"type": "text"
+										},
+										{
+											"key": "avatar_user",
+											"type": "file",
+											"src": "/C:/Users/Hai Nguyen/Pictures/95516668_236048384156116_3902860563109117952_n.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://freelancer.timviec365.com.vn/api_app/freelancer/updateInfo",
+									"protocol": "https",
+									"host": [
+										"freelancer",
+										"timviec365",
+										"com",
+										"vn"
+									],
+									"path": [
+										"api_app",
+										"freelancer",
+										"updateInfo"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cập nhật giới thiệu bản thân",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1SUQiOiIxNDgiLCJlbWFpbCI6ImhhaW5ndXllbi5taWNyb3NvZnRAZ21haWwuY29tIiwidGltZSI6MTYyNTIxMzE2N30.U7FRNIKVzqUG6WAezAPNTbYk-rIHCytju0adc9reG3g",
+											"type": "text"
+										},
+										{
+											"key": "skill_year",
+											"value": "4",
+											"description": "số năm kinh nghiệm",
+											"type": "text"
+										},
+										{
+											"key": "user_des",
+											"value": "Hello my name is Hoa Hoa 05",
+											"description": "giới thiệu bản thân",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://freelancer.timviec365.com.vn/api_app/freelancer/updateInfoBasic",
+									"protocol": "https",
+									"host": [
+										"freelancer",
+										"timviec365",
+										"com",
+										"vn"
+									],
+									"path": [
+										"api_app",
+										"freelancer",
+										"updateInfoBasic"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cập nhật công việc mong muốn",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1SUQiOiIxNDgiLCJlbWFpbCI6ImhhaW5ndXllbi5taWNyb3NvZnRAZ21haWwuY29tIiwidGltZSI6MTYyNTIxMzE2N30.U7FRNIKVzqUG6WAezAPNTbYk-rIHCytju0adc9reG3g",
+											"type": "text"
+										},
+										{
+											"key": "user_job",
+											"value": "1",
+											"description": "nghề nghiệp ( string)",
+											"type": "text"
+										},
+										{
+											"key": "form_of_work",
+											"value": "2",
+											"description": "hình thức làm việc",
+											"type": "text"
+										},
+										{
+											"key": "work_desire",
+											"value": "2",
+											"description": "công việc mong muốn",
+											"type": "text"
+										},
+										{
+											"key": "work_place",
+											"value": "1",
+											"description": "địa điểm làm việc mong muốn",
+											"type": "text"
+										},
+										{
+											"key": "salary_type",
+											"value": "2",
+											"description": "mức lương: 1 - cố định, 2 - ước lượng",
+											"type": "text"
+										},
+										{
+											"key": "salary_estimate_number_1",
+											"value": "220000",
+											"description": "mức lương ước lượng 1",
+											"type": "text"
+										},
+										{
+											"key": "salary_salary_estimate_number_2",
+											"value": "222222",
+											"description": "mức lương ước lượng 2",
+											"type": "text"
+										},
+										{
+											"key": "salary_estimates_date",
+											"value": "2",
+											"description": "lương / thời gian ( ước lương)",
+											"type": "text"
+										},
+										{
+											"key": "salary_permanent_number",
+											"value": "250000",
+											"description": "mức lương cố định",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "salary_permanent_date",
+											"value": "2",
+											"description": "lương / thời gian ( cố định)",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "https://freelancer.timviec365.com.vn/api_app/freelancer/updateToDo",
+									"protocol": "https",
+									"host": [
+										"freelancer",
+										"timviec365",
+										"com",
+										"vn"
+									],
+									"path": [
+										"api_app",
+										"freelancer",
+										"updateToDo"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cập nhật kỹ năng",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1SUQiOiIxNDgiLCJlbWFpbCI6ImhhaW5ndXllbi5taWNyb3NvZnRAZ21haWwuY29tIiwidGltZSI6MTYyNTIxMzE2N30.U7FRNIKVzqUG6WAezAPNTbYk-rIHCytju0adc9reG3g",
+											"type": "text"
+										},
+										{
+											"key": "list_cate",
+											"value": "3,4",
+											"description": "danh sách kỹ năng ( chỉ dc chọn 2 trở xuống, ngăn cách id bằng dấu phẩy nếu chọn 2)",
+											"type": "text"
+										},
+										{
+											"key": "skill_detail",
+											"value": "1,2,3,4,5,6,7,8,7",
+											"description": "kĩ năng ngành ( chọn nhiều thì ngăn bằng dấu phẩy)",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://freelancer.timviec365.com.vn/api_app/freelancer/updateSkill",
+									"protocol": "https",
+									"host": [
+										"freelancer",
+										"timviec365",
+										"com",
+										"vn"
+									],
+									"path": [
+										"api_app",
+										"freelancer",
+										"updateSkill"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cập nhật hồ sơ năng lực - ảnh",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1SUQiOiIxNTEiLCJlbWFpbCI6ImhhaW5ndXllbi5taWNyb3NvZnRAZ21haWwuY29tIiwidGltZSI6MTYyNTIxNTk4NH0.pHYp6rvWJ8mSUb1R2gdMozCjuOv9qJGfyHQ5aLA7u8Q",
+											"type": "text"
+										},
+										{
+											"key": "img_hs",
+											"description": "chọn ảnh cho hồ sơ năng lực (jpg,png,jpeg)",
+											"type": "file",
+											"src": "/D:/UDPM4/Xây Dựng PMQL/Buoi-1-BTMauXDPMQL-HoaLT.docx"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://freelancer.timviec365.com.vn/api_app/freelancer/updateImgPRF",
+									"protocol": "https",
+									"host": [
+										"freelancer",
+										"timviec365",
+										"com",
+										"vn"
+									],
+									"path": [
+										"api_app",
+										"freelancer",
+										"updateImgPRF"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cập nhật hồ sơ năng lực - file",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1SUQiOiIxNTEiLCJlbWFpbCI6ImhhaW5ndXllbi5taWNyb3NvZnRAZ21haWwuY29tIiwidGltZSI6MTYyNTIxNTk4NH0.pHYp6rvWJ8mSUb1R2gdMozCjuOv9qJGfyHQ5aLA7u8Q",
+											"type": "text"
+										},
+										{
+											"key": "file_hs",
+											"description": "file hồ sơ năng lực: ( doc,pdf) max: 2mb",
+											"type": "file",
+											"src": "/D:/UDPM4/Xây Dựng PMQL/HaiNv_Quanlycongnohanghoa (2).accdb"
+										},
+										{
+											"key": "name",
+											"value": "Dự án xịn",
+											"description": "tên hồ sơ năng lực",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://freelancer.timviec365.com.vn/api_app/freelancer/updateFilePRF",
+									"protocol": "https",
+									"host": [
+										"freelancer",
+										"timviec365",
+										"com",
+										"vn"
+									],
+									"path": [
+										"api_app",
+										"freelancer",
+										"updateFilePRF"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Lấy danh sách tỉnh, huyện",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://freelancer.timviec365.com.vn/api_app/freelancer/getProvince?city_id=2",
+									"protocol": "https",
+									"host": [
+										"freelancer",
+										"timviec365",
+										"com",
+										"vn"
+									],
+									"path": [
+										"api_app",
+										"freelancer",
+										"getProvince"
+									],
+									"query": [
+										{
+											"key": "city_id",
+											"value": "2",
+											"description": "id tỉnh ( ko truyền thì lấy danh sách tỉnh), truyền thì lấy danh sách huyện theo id tỉnh"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Xoá hồ sơ năng lực",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "https://freelancer.timviec365.com.vn/api_app/freelancer/deleteProficiency?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1SUQiOiI4NSIsImVtYWlsIjoiaGFpeHl6QGdtYWlsLmNvbSIsInRpbWUiOjE2MjQ2MDU1ODF9.RTHuDHzn_ufT9pMWSIE4QeTw7wK_bv4YHK-VhqPg7_o&id_proficiency=123",
+									"protocol": "https",
+									"host": [
+										"freelancer",
+										"timviec365",
+										"com",
+										"vn"
+									],
+									"path": [
+										"api_app",
+										"freelancer",
+										"deleteProficiency"
+									],
+									"query": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1SUQiOiI4NSIsImVtYWlsIjoiaGFpeHl6QGdtYWlsLmNvbSIsInRpbWUiOjE2MjQ2MDU1ODF9.RTHuDHzn_ufT9pMWSIE4QeTw7wK_bv4YHK-VhqPg7_o"
+										},
+										{
+											"key": "id_proficiency",
+											"value": "123",
+											"description": "id hồ sơ năng lực"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Lấy danh sách ngành nghề, key tag",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://freelancer.timviec365.com.vn/api_app/freelancer/getSkill?category_id=2",
+									"protocol": "https",
+									"host": [
+										"freelancer",
+										"timviec365",
+										"com",
+										"vn"
+									],
+									"path": [
+										"api_app",
+										"freelancer",
+										"getSkill"
+									],
+									"query": [
+										{
+											"key": "category_id",
+											"value": "2",
+											"description": "truyền thì lấy danh sách keytag theo ngành nghề, ko truyền thì lấy tất cả danh sách ngành nghề"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Freelancer xem liên hệ của ntd",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1SUQiOiIxNTIiLCJlbWFpbCI6ImhhaW5ndXllbi5taWNyb3NvZnRAZ21haWwuY29tIiwidGltZSI6MTYyNTMwNjI2N30.p9-85NMU0MbWck5mt9haxjFg0LN-01Bgqo9HP3buIds",
+											"type": "text"
+										},
+										{
+											"key": "employe_id",
+											"value": "155",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://freelancer.timviec365.com.vn/api_app/employer/flcSeenContact",
+									"protocol": "https",
+									"host": [
+										"freelancer",
+										"timviec365",
+										"com",
+										"vn"
+									],
+									"path": [
+										"api_app",
+										"employer",
+										"flcSeenContact"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "API nhà tuyển dụng",
+					"item": [
+						{
+							"name": "Quản lý freelancer",
+							"item": [
+								{
+									"name": "Freelancer đã lưu, đang làm việc, đã đặt giá",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://freelancer.timviec365.com.vn/api_app/employer/eplSavedFlc?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1SUQiOiIyNTMiLCJlbWFpbCI6ImhhdHVhbmRlcHRyYWkyMDAxQGdtYWlsLmNvbSIsInRpbWUiOjE2MjYzNDM1MDV9.zKjxLmEP1zQeekHlxHq0FkVmPPf4oE4I5I4KTG8vkXo&page=1&limit=1",
+											"protocol": "https",
+											"host": [
+												"freelancer",
+												"timviec365",
+												"com",
+												"vn"
+											],
+											"path": [
+												"api_app",
+												"employer",
+												"eplSavedFlc"
+											],
+											"query": [
+												{
+													"key": "token",
+													"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1SUQiOiIyNTMiLCJlbWFpbCI6ImhhdHVhbmRlcHRyYWkyMDAxQGdtYWlsLmNvbSIsInRpbWUiOjE2MjYzNDM1MDV9.zKjxLmEP1zQeekHlxHq0FkVmPPf4oE4I5I4KTG8vkXo"
+												},
+												{
+													"key": "page",
+													"value": "1",
+													"description": "page"
+												},
+												{
+													"key": "limit",
+													"value": "1",
+													"description": "số bản ghi trong page"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Chấp nhận đặt giá hay không",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "token",
+													"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiMTI4IiwiZW1haWwiOiJpZC5oYWluZ3V5ZW45MkBnbWFpbC5jb20iLCJ0aW1lIjoxNjIzMjMxNzQ2fQ.EbJm7iH84Dv2leJ8We5z6F2ZavcPiMLXKuthmXzriYw",
+													"type": "text"
+												},
+												{
+													"key": "isconfirm",
+													"value": "1",
+													"description": "1-chấp nhận, 0- từ chối",
+													"type": "text"
+												},
+												{
+													"key": "job_id",
+													"value": "23",
+													"description": "id công việc",
+													"type": "text"
+												},
+												{
+													"key": "flc_id",
+													"value": "151",
+													"description": "id ứng viên",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "https://freelancer.timviec365.com.vn/api_app/employer/confirmPriceSetting",
+											"protocol": "https",
+											"host": [
+												"freelancer",
+												"timviec365",
+												"com",
+												"vn"
+											],
+											"path": [
+												"api_app",
+												"employer",
+												"confirmPriceSetting"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Nhà tuyển dụng vote freelancer",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "token",
+													"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiMTI4IiwiZW1haWwiOiJpZC5oYWluZ3V5ZW45MkBnbWFpbC5jb20iLCJ0aW1lIjoxNjIzMjMxNzQ2fQ.EbJm7iH84Dv2leJ8We5z6F2ZavcPiMLXKuthmXzriYw",
+													"type": "text"
+												},
+												{
+													"key": "flc_id",
+													"value": "151",
+													"description": "id ứng viên",
+													"type": "text"
+												},
+												{
+													"key": "job_id",
+													"value": "25",
+													"description": "id công việc",
+													"type": "text"
+												},
+												{
+													"key": "star",
+													"value": "4",
+													"description": "số sao vote",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "https://freelancer.timviec365.com.vn/api_app/employer/employeVoteFlc",
+											"protocol": "https",
+											"host": [
+												"freelancer",
+												"timviec365",
+												"com",
+												"vn"
+											],
+											"path": [
+												"api_app",
+												"employer",
+												"employeVoteFlc"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Tuyển dụng freelancer",
+							"item": [
+								{
+									"name": "Đăng việc theo dự án, bán thời gian",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "token",
+													"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiMTU1IiwiZW1haWwiOiJuZ3ZjaGluaHlldWxhbkBnbWFpbC5jb20iLCJ0aW1lIjoxNjIzMjk2MjM4fQ.uqJROPhkQW8_zi4XNovKKtipP8soqbYd35WoX04hYME",
+													"type": "text"
+												},
+												{
+													"key": "title_job",
+													"value": "dự án moiwsssaaa",
+													"description": "tên dự án",
+													"type": "text"
+												},
+												{
+													"key": "category_id",
+													"value": "1",
+													"description": "lĩnh vực",
+													"type": "text"
+												},
+												{
+													"key": "work_type",
+													"value": "2",
+													"description": "hình thức làm việc",
+													"type": "text"
+												},
+												{
+													"key": "work_city",
+													"value": "12",
+													"description": "nơi làm việc",
+													"type": "text"
+												},
+												{
+													"key": "work_exp",
+													"value": "2",
+													"description": "yêu cầu kinh nghiệm",
+													"type": "text"
+												},
+												{
+													"key": "work_des",
+													"value": "hehehehe",
+													"description": "nội dung chi tiết",
+													"type": "text"
+												},
+												{
+													"key": "skill_id",
+													"value": "3,5,6,7,9",
+													"description": "kỹ năng",
+													"type": "text"
+												},
+												{
+													"key": "salary_type",
+													"value": "1",
+													"description": "mức lương: 1- cố định, 2- ước lượng",
+													"type": "text"
+												},
+												{
+													"key": "salary_estimate_number_1",
+													"value": "250000",
+													"description": "mức lương ước lượng 1",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "salary_salary_estimate_number_2",
+													"value": "4500000",
+													"description": "mức lương ước lượng 2",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "salary_estimates_date",
+													"value": "1",
+													"description": "lương theo: ngày tuần tháng năm ( 1 2 3 4)",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "salary_permanent_number",
+													"value": "250000",
+													"description": "mức lương cố định",
+													"type": "text"
+												},
+												{
+													"key": "salary_permanent_date",
+													"value": "2",
+													"description": "lương theo: ngày tuần tháng năm ( 1 2 3 4)",
+													"type": "text"
+												},
+												{
+													"key": "date_bid_start",
+													"value": "2020-05-28",
+													"description": "ngày bắt đầu đặt giá",
+													"type": "text"
+												},
+												{
+													"key": "date_bid_end",
+													"value": "2020-06-06",
+													"description": "ngày kết thúc đặt giá",
+													"type": "text"
+												},
+												{
+													"key": "date_work_start",
+													"value": "2020-06-09",
+													"description": "ngày bắt đầu làm việc",
+													"type": "text"
+												},
+												{
+													"key": "working_term",
+													"value": "12",
+													"description": "thời gian làm việc ( tháng)",
+													"type": "text"
+												},
+												{
+													"key": "job_type",
+													"value": "1",
+													"description": "0-việc theo dự án, 1- việc bán thời gian",
+													"type": "text"
+												},
+												{
+													"key": "work_file_des",
+													"description": "file mô tả công việc ( doc,pdf,png)",
+													"type": "file",
+													"src": "/D:/UDPM4/Xây Dựng PMQL/Buoi-2-BTMauXDPMQL-HoaLT.docx"
+												},
+												{
+													"key": "company_logo",
+													"description": "logo công ty",
+													"type": "file",
+													"src": "/C:/Users/Hai Nguyen/Desktop/linh tinh/meme/f5ed0f8cf037448964f12be0b47db030.jpg"
+												}
+											]
+										},
+										"url": {
+											"raw": "https://freelancer.timviec365.com.vn/api_app/employer/pJobByProject",
+											"protocol": "https",
+											"host": [
+												"freelancer",
+												"timviec365",
+												"com",
+												"vn"
+											],
+											"path": [
+												"api_app",
+												"employer",
+												"pJobByProject"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Xem chi tiết Freelancer",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://freelancer.timviec365.com.vn/api_app/employer/detailFreelancer?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiMTg0IiwiZW1haWwiOiJscnE2NTMxNUB6d29oby5jb20iLCJvdHAiOiIzUE1RUFoiLCJ0aW1lIjoxNjI0MzMzOTQ0fQ.Kd8T_O9oifL0wCOlQEDE0IFaMuzpxaYh-aBFP-ZxETk&flc_id=268",
+									"protocol": "https",
+									"host": [
+										"freelancer",
+										"timviec365",
+										"com",
+										"vn"
+									],
+									"path": [
+										"api_app",
+										"employer",
+										"detailFreelancer"
+									],
+									"query": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiMTg0IiwiZW1haWwiOiJscnE2NTMxNUB6d29oby5jb20iLCJvdHAiOiIzUE1RUFoiLCJ0aW1lIjoxNjI0MzMzOTQ0fQ.Kd8T_O9oifL0wCOlQEDE0IFaMuzpxaYh-aBFP-ZxETk"
+										},
+										{
+											"key": "flc_id",
+											"value": "268",
+											"description": "id freelancer"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Nhà tuyển dụng đăng nhập",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "ngvchinhyeulan@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "111111",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://freelancer.timviec365.com.vn/api_app/loginEmployer",
+									"protocol": "https",
+									"host": [
+										"freelancer",
+										"timviec365",
+										"com",
+										"vn"
+									],
+									"path": [
+										"api_app",
+										"loginEmployer"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Top freelancer nổi bật",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://freelancer.timviec365.com.vn/api_app/employer/topFreelancer?limit=3",
+									"protocol": "https",
+									"host": [
+										"freelancer",
+										"timviec365",
+										"com",
+										"vn"
+									],
+									"path": [
+										"api_app",
+										"employer",
+										"topFreelancer"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "3",
+											"description": "lấy 3 freelancer nổi bật nhất"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Xem liên hệ",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiMTg0IiwiZW1haWwiOiJscnE2NTMxNUB6d29oby5jb20iLCJvdHAiOiIzUE1RUFoiLCJ0aW1lIjoxNjI0MzMzOTQ0fQ.Kd8T_O9oifL0wCOlQEDE0IFaMuzpxaYh-aBFP-ZxETk",
+											"type": "text"
+										},
+										{
+											"key": "flc_id",
+											"value": "268",
+											"description": "id ứng viên",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://freelancer.timviec365.com.vn/api_app/employer/seenContact",
+									"protocol": "https",
+									"host": [
+										"freelancer",
+										"timviec365",
+										"com",
+										"vn"
+									],
+									"path": [
+										"api_app",
+										"employer",
+										"seenContact"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Nhà tuyển dụng lưu freelancer",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiMTI4IiwiZW1haWwiOiJpZC5oYWluZ3V5ZW45MkBnbWFpbC5jb20iLCJ0aW1lIjoxNjIzMjg5ODE0fQ.fn4q794hC4Q_ge3bELaJwM0llUJ3T0sFFweOk4FmSzs",
+											"type": "text"
+										},
+										{
+											"key": "flc_id",
+											"value": "152",
+											"description": "id ứng viên",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://freelancer.timviec365.com.vn/api_app/employer/saveFLC",
+									"protocol": "https",
+									"host": [
+										"freelancer",
+										"timviec365",
+										"com",
+										"vn"
+									],
+									"path": [
+										"api_app",
+										"employer",
+										"saveFLC"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Freelancer đăng nhập",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "hainguyen.microsoft@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "922000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "freelancer.timviec/api_app/freelancer/loginFreelancer",
+							"host": [
+								"freelancer",
+								"timviec"
+							],
+							"path": [
+								"api_app",
+								"freelancer",
+								"loginFreelancer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Freelancer đăng ký",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "dbm16769@cuoly.com",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "0342734234",
+									"description": "số điện thoại",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Hair nguyen",
+									"description": "họ tên",
+									"type": "text"
+								},
+								{
+									"key": "sex",
+									"value": "1",
+									"description": "giới tính: 0-nam, 1-nữ",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "922000",
+									"description": "> 6 kí tự ",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "2",
+									"description": "id tỉnh",
+									"type": "text"
+								},
+								{
+									"key": "district",
+									"value": "222",
+									"description": "id huyện",
+									"type": "text"
+								},
+								{
+									"key": "birthday",
+									"value": "09-02-2000",
+									"description": "ngày sinh (d-m-Y)",
+									"type": "text"
+								},
+								{
+									"key": "salary_type",
+									"value": "2",
+									"description": "loại lương: 1 - cố định, 2 - ước lượng",
+									"type": "text"
+								},
+								{
+									"key": "list_cate",
+									"value": "1,2",
+									"description": "danh sách ngành nghề: chỉ dc 2 ngành nghề, nếu là 2 thì cách nhau = dấu phẩy",
+									"type": "text"
+								},
+								{
+									"key": "avatar_user",
+									"description": "ảnh ( không bắt buộc)",
+									"type": "file",
+									"src": "/C:/Users/Hai Nguyen/Desktop/linh tinh/meme/0e59006c217a37812d030304d1274d8b.jpg"
+								},
+								{
+									"key": "salary_permanent_number",
+									"value": "250000",
+									"description": "mức lương cố định",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "salary_permanent_date",
+									"value": "1",
+									"description": "lương / thời hạn ( cố định)",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "salary_estimate_number_1",
+									"value": "123123",
+									"description": "mức lương ước lượng 1",
+									"type": "text"
+								},
+								{
+									"key": "salary_salary_estimate_number_2",
+									"value": "333333",
+									"description": "mức lương ước lượng 2",
+									"type": "text"
+								},
+								{
+									"key": "salary_estimates_date",
+									"value": "2",
+									"description": "lương / thời hạn ( ước lượng) ",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://freelancer.timviec365.com.vn/api_app/freelancer/registerFreelancer",
+							"protocol": "https",
+							"host": [
+								"freelancer",
+								"timviec365",
+								"com",
+								"vn"
+							],
+							"path": [
+								"api_app",
+								"freelancer",
+								"registerFreelancer"
+							]
+						},
+						"description": "đăng ký"
+					},
+					"response": []
+				},
+				{
+					"name": "Freelancer kích hoạt tài khoản",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjI2NyIsImVtYWlsIjoiZGJtMTY3NjlAY3VvbHkuY29tIiwib3RwIjoiWDRNTjNLIiwidGltZSI6MTYyMzY0MzM4Nn0.CJ3KozAAXKUZhvAj4kdTTsR9GXW8KO-byvSEVFJgM9k",
+									"type": "text"
+								},
+								{
+									"key": "otp",
+									"value": "X4MN3K",
+									"description": "OTP nhận trong mail",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://freelancer.timviec365.com.vn/api_app/freelancer/activeFreelancer",
+							"protocol": "https",
+							"host": [
+								"freelancer",
+								"timviec365",
+								"com",
+								"vn"
+							],
+							"path": [
+								"api_app",
+								"freelancer",
+								"activeFreelancer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Freelancer gửi mã OTP quên mật khẩu",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "hainguyen.microsoft@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://freelancer.timviec365.com.vn/api_app/freelancer/checkMailForgotPass",
+							"protocol": "https",
+							"host": [
+								"freelancer",
+								"timviec365",
+								"com",
+								"vn"
+							],
+							"path": [
+								"api_app",
+								"freelancer",
+								"checkMailForgotPass"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Freelancer check OTP quên mật khẩu",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImhhaW5ndXllbi5taWNyb3NvZnRAZ21haWwuY29tIiwidGltZSI6MTYyMjYyMTI2MSwib3RwIjoiMkgyREpLIn0.U-MlhASOvZk5821UuLdbVGQcPON5tLllT0C2MPIkxvk",
+									"type": "text"
+								},
+								{
+									"key": "otp",
+									"value": "2H2DJK",
+									"description": "OTP quên mật khẩu trong mail",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8187/api_app/freelancer/checkOTPforgotPassFLC",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8187",
+							"path": [
+								"api_app",
+								"freelancer",
+								"checkOTPforgotPassFLC"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Freelancer lấy lại mật khẩu",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImhhaW5ndXllbi5taWNyb3NvZnRAZ21haWwuY29tIiwidGltZSI6MTYyMjYyMjE2OH0.rEFZ6TtDQn682N-Gs2rh3BfJkioNaeDnfeQGMBXgMek",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "922000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://freelancer.timviec365.com.vn/api_app/freelancer/rePassFLC",
+							"protocol": "https",
+							"host": [
+								"freelancer",
+								"timviec365",
+								"com",
+								"vn"
+							],
+							"path": [
+								"api_app",
+								"freelancer",
+								"rePassFLC"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Home",
+			"item": [
+				{
+					"name": "Index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://freelancer.timviec365.com.vn/api_app/home/loadDataIndex?page=2&limit=3",
+							"protocol": "https",
+							"host": [
+								"freelancer",
+								"timviec365",
+								"com",
+								"vn"
+							],
+							"path": [
+								"api_app",
+								"home",
+								"loadDataIndex"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "2"
+								},
+								{
+									"key": "limit",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Việc theo ngành nghề",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://freelancer.timviec365.com.vn/api_app/home/jobByCategory?category_id=1",
+							"protocol": "https",
+							"host": [
+								"freelancer",
+								"timviec365",
+								"com",
+								"vn"
+							],
+							"path": [
+								"api_app",
+								"home",
+								"jobByCategory"
+							],
+							"query": [
+								{
+									"key": "category_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tìm kiếm việc",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://freelancer.timviec365.com.vn/api_app/home/searchJob?key_tag=1&category_id=1&work_city=8&limit=2&page=1",
+							"protocol": "https",
+							"host": [
+								"freelancer",
+								"timviec365",
+								"com",
+								"vn"
+							],
+							"path": [
+								"api_app",
+								"home",
+								"searchJob"
+							],
+							"query": [
+								{
+									"key": "key_tag",
+									"value": "1"
+								},
+								{
+									"key": "category_id",
+									"value": "1"
+								},
+								{
+									"key": "work_city",
+									"value": "8"
+								},
+								{
+									"key": "limit",
+									"value": "2"
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"description": "trang"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tìm kiếm freelancer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://freelancer.timviec365.com.vn/api_app/home/searchFreelancer?limit=5&page=5",
+							"protocol": "https",
+							"host": [
+								"freelancer",
+								"timviec365",
+								"com",
+								"vn"
+							],
+							"path": [
+								"api_app",
+								"home",
+								"searchFreelancer"
+							],
+							"query": [
+								{
+									"key": "skill_id",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "category_id",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "city_id",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "5"
+								},
+								{
+									"key": "page",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "aa",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	]
+}

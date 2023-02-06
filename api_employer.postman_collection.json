@@ -1,0 +1,934 @@
+{
+	"info": {
+		"_postman_id": "d9369984-5e9a-4412-98b0-693012648089",
+		"name": "api_employer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Đăng nhập NTD",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "id.chinhnguyen@gmail.com",
+							"description": "email đăng nhập",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "21122000",
+							"description": "mật khẩu đăng nhập",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8187/api_app/loginEmployer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8187",
+					"path": [
+						"api_app",
+						"loginEmployer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Quên mật khẩu NTD",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "id.chinhnguyen@gmail.com",
+							"description": "email muốn lấy lại mật khẩu",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://freelancer.timviec365.com.vn/api_app/forgotPasswordEpl",
+					"protocol": "https",
+					"host": [
+						"freelancer",
+						"timviec365",
+						"com",
+						"vn"
+					],
+					"path": [
+						"api_app",
+						"forgotPasswordEpl"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Nhập OTP quên mật khẩu NTD",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImlkLmNoaW5obmd1eWVuQGdtYWlsLmNvbSIsInRpbWUiOjE2MjMzMTkwMDgsIm90cCI6IjVGMjk2TyJ9.UL60oobckgkUsnz347PElCuUye7FYmhlS_Wx8a1tmJA",
+							"description": "token gửi về sau khi nhập email quên mật khẩu",
+							"type": "text"
+						},
+						{
+							"key": "otp",
+							"value": "5F296O",
+							"description": "mã OTP gửi về mail mà nhập quên mật khẩu",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://freelancer.timviec365.com.vn/api_app/OTPforgotPasswordEpl",
+					"protocol": "http",
+					"host": [
+						"freelancer",
+						"timviec365",
+						"com",
+						"vn"
+					],
+					"path": [
+						"api_app",
+						"OTPforgotPasswordEpl"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Thêm tài khoản NTD",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "chinhnv",
+							"description": "Tên người dùng",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "111111",
+							"description": "mật khẩu",
+							"type": "text"
+						},
+						{
+							"key": "repassword",
+							"value": "111111",
+							"description": "nhập lại mật khẩu",
+							"type": "text"
+						},
+						{
+							"key": "sex",
+							"value": "1",
+							"description": "giới tính(1 là nam,còn lại là nữ)",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "0988888888",
+							"description": "Số điện thoại",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "1",
+							"description": "Thành phố",
+							"type": "text"
+						},
+						{
+							"key": "district",
+							"value": "1",
+							"description": "quận huyện",
+							"type": "text"
+						},
+						{
+							"key": "birthday",
+							"value": "21/12/2000",
+							"description": "sinh nhật",
+							"type": "text"
+						},
+						{
+							"key": "avatar",
+							"description": "ảnh đại diện/logo công ty",
+							"type": "file",
+							"src": [],
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "pobinix306@pidhoes.com",
+							"description": "email đăng ký",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8187/api_app/addemployer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8187",
+					"path": [
+						"api_app",
+						"addemployer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Nhập mật khẩu mới của quên mật khẩu NTD",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImlkLmNoaW5obmd1eWVuQGdtYWlsLmNvbSIsInRpbWUiOjE2MjU2NDMwMjZ9.JvIoDa0AskHKLfNGVyBZbo_QV_YNVu63_2F-2yjbqJg",
+							"description": "token gửi về sau khi nhập email quên mật khẩu",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"description": "nhập mật khẩu mới",
+							"type": "text"
+						},
+						{
+							"key": "repassword",
+							"value": "123456",
+							"description": "nhập lại mật khẩu mới",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8187/api_app/newPasswordEpl",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8187",
+					"path": [
+						"api_app",
+						"newPasswordEpl"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Kích hoạt tài khoản NTD",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "otp",
+							"value": "L27SAD",
+							"description": "OTP gửi về email đăng ký",
+							"type": "text"
+						},
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjpudWxsLCJlbWFpbCI6Im5ndmNoaW5oeWV1bGFuQGdtYWlsLmNvbSIsIm90cCI6IkwyN1NBRCIsInRpbWUiOjE2MjI2OTI4ODB9.qfXjeWUhRbpVymooP2_YQUgEtfX0IQO3_xTBcSwL9Wo",
+							"description": "token trả về sau khi đăng ký tài khoản",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://freelancer.timviec365.com.vn/api_app/activeEpl",
+					"protocol": "https",
+					"host": [
+						"freelancer",
+						"timviec365",
+						"com",
+						"vn"
+					],
+					"path": [
+						"api_app",
+						"activeEpl"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Đổi mật khẩu NTD",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiNzIiLCJlbWFpbCI6InR1YW5kZXZAZ21haWwuY29tIiwidGltZSI6MTYyMzIzMTA2Mn0.xjnGu_GSaNXBXbIn7EOXDL6Sz4GNJ2pcXnmJ8d4AaKk",
+							"description": "token trả về khi đăng nhập",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "21120",
+							"description": "nhập mật khẩu hiện tại",
+							"type": "text"
+						},
+						{
+							"key": "newpassword",
+							"value": "111111",
+							"description": "nhập mật khẩu mới(muốn thay đổi)",
+							"type": "text"
+						},
+						{
+							"key": "newrepassword",
+							"value": "111111",
+							"description": "nhập lại mật khẩu mới(muốn thay đổi)",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8187/api_app/updatePassLoginEpl",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8187",
+					"path": [
+						"api_app",
+						"updatePassLoginEpl"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Thông tin ngoài NTD",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiMTAzIiwiZW1haWwiOiJpZC5jaGluaG5ndXllbkBnbWFpbC5jb20iLCJ0aW1lIjoxNjIyNjE5MzM2fQ.ajZ8izq73yDSjY3BBa2cFtAnkzbYBMzSPrvNwmEFKTc",
+							"description": "token trả về khi đăng nhập",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8187/api_app/ProfileEpl",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8187",
+					"path": [
+						"api_app",
+						"ProfileEpl"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Thông tin trong NTD",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiMTAzIiwiZW1haWwiOiJpZC5jaGluaG5ndXllbkBnbWFpbC5jb20iLCJ0aW1lIjoxNjIyNjE5MzM2fQ.ajZ8izq73yDSjY3BBa2cFtAnkzbYBMzSPrvNwmEFKTc",
+							"description": "token trả về khi đăng nhập",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8187/api_app/updateProfileEpl",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8187",
+					"path": [
+						"api_app",
+						"updateProfileEpl"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cập nhật thông tin NTD",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiMTAzIiwiZW1haWwiOiJpZC5jaGluaG5ndXllbkBnbWFpbC5jb20iLCJ0aW1lIjoxNjIzMjkyNjQ0fQ.mFYKXP2awBYuQ_U7hBy8D4LHSBbXHvdEb1wWDvck96Q",
+							"description": "token trả về khi đăng nhập",
+							"type": "text"
+						},
+						{
+							"key": "avatar",
+							"description": "ảnh đại diện/logo công ty",
+							"type": "file",
+							"src": "/C:/Users/G/OneDrive/Hình ảnh/freelancer_img/abc.jpg",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "Chinh nguyen",
+							"description": "tên người dùng/tên công ty",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "birthday",
+							"value": "21/12/2000",
+							"description": "sinh nhật",
+							"type": "text"
+						},
+						{
+							"key": "sex",
+							"value": "1",
+							"description": "giới tính(1 là anm,cofnlaji là nữ)",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "id.chinhnguyen@gmail.com",
+							"description": "email đăng ký của tài khoản này",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "phone",
+							"value": "55",
+							"description": "số điện thoại của tài khoản này",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "2",
+							"description": "thành phố",
+							"type": "text"
+						},
+						{
+							"key": "district",
+							"value": "1",
+							"description": "quận huyện",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8187/api_app/editProfileEpl",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8187",
+					"path": [
+						"api_app",
+						"editProfileEpl"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tin NTD đã đăng",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiMTAzIiwiZW1haWwiOiJpZC5jaGluaG5ndXllbkBnbWFpbC5jb20iLCJ0aW1lIjoxNjIyNjE5MzM2fQ.ajZ8izq73yDSjY3BBa2cFtAnkzbYBMzSPrvNwmEFKTc",
+							"description": "token trả về khi đăng nhập",
+							"type": "text"
+						},
+						{
+							"key": "page",
+							"value": "0",
+							"description": "trang bắt đầu",
+							"type": "text"
+						},
+						{
+							"key": "limit",
+							"value": "2",
+							"description": "số bản ghi 1 trang",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8187/api_app/postjobByProject",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8187",
+					"path": [
+						"api_app",
+						"postjobByProject"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Chi tiết tin NTD đã đăng",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiMzU1IiwiZW1haWwiOiJ1bGEyMTY1OUB6d29oby5jb20iLCJvdHAiOiJGRDFUNUciLCJ0aW1lIjoxNjI2MzM4NTkwfQ.83f6s07aMCOJBRgaEHFYCYqjrvzybpTjZd4Av22SdDk",
+							"description": "token trả về khi đăng nhập",
+							"type": "text"
+						},
+						{
+							"key": "id",
+							"value": "128",
+							"description": "id job đã đăng",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://freelancer.timviec365.com.vn/api_app/loadpostjobByID",
+					"protocol": "https",
+					"host": [
+						"freelancer",
+						"timviec365",
+						"com",
+						"vn"
+					],
+					"path": [
+						"api_app",
+						"loadpostjobByID"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sửa tin đã đăng",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "10",
+							"description": "id job đã đăng",
+							"type": "text"
+						},
+						{
+							"key": "company_logo",
+							"description": "ảnh đại diện/ logo công ty",
+							"type": "file",
+							"src": "/C:/Users/G/OneDrive/Hình ảnh/freelancer_img/abc.jpg",
+							"disabled": true
+						},
+						{
+							"key": "title_job",
+							"value": "thiết kế banner giảm giá siêu thị VinMart+",
+							"description": "tiêu đề bài đăng",
+							"type": "text"
+						},
+						{
+							"key": "category_id",
+							"value": "2",
+							"description": "lĩnh vực cần tuyển",
+							"type": "text"
+						},
+						{
+							"key": "work_type",
+							"value": "2",
+							"description": "hình thức làm việc",
+							"type": "text"
+						},
+						{
+							"key": "work_city",
+							"value": "1",
+							"description": "nơi làm việc",
+							"type": "text"
+						},
+						{
+							"key": "work_exp",
+							"value": "1",
+							"description": "kinh nghiệm",
+							"type": "text"
+						},
+						{
+							"key": "work_des",
+							"value": "1",
+							"description": "Nội dung chi tiết các công việc cần thực hiện",
+							"type": "text"
+						},
+						{
+							"key": "work_file_des",
+							"description": "file đính kèm",
+							"type": "file",
+							"src": "/C:/Users/G/OneDrive/Máy tính/CVDEV/ChinhnguyenDev.docx"
+						},
+						{
+							"key": "skill_id",
+							"value": "1",
+							"description": "id kỹ năng",
+							"type": "text"
+						},
+						{
+							"key": "salary_type",
+							"value": "1",
+							"description": "mức lương (1 là cố định, 2 là ước lượng)",
+							"type": "text"
+						},
+						{
+							"key": "salary_estimate_number_1",
+							"value": "",
+							"description": "lương theo ước lượng",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "salary_salary_estimate_number_2",
+							"value": "",
+							"description": "lương theo ước lượng",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "salary_estimate_date",
+							"value": "",
+							"description": "thời gian làm ước lượng",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "salary_permanent_number",
+							"value": "100000",
+							"description": "lương theo cố định",
+							"type": "text"
+						},
+						{
+							"key": "salary_permanent_date",
+							"value": "1",
+							"description": "thời gian làm cố định",
+							"type": "text"
+						},
+						{
+							"key": "date_bid_start",
+							"value": "29/5/2021",
+							"description": "ngày bắt đầu đặt giá",
+							"type": "text"
+						},
+						{
+							"key": "date_bid_end",
+							"value": "29/5/2021",
+							"description": "ngày kết thúc đặt giá",
+							"type": "text"
+						},
+						{
+							"key": "date_work_start",
+							"value": "29/5/2021",
+							"description": "ngày bắt đầu làm việc",
+							"type": "text"
+						},
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiNzIiLCJ1c2VyX3R5cGUiOiIxIiwiZW1haWwiOiJ0dWFuZGV2QGdtYWlsLmNvbSIsInRpbWUiOjE2MjMwMDE3ODZ9.4E9NA5ImsIzk65xBQwqSuKSjS-qjTlgw4R_BZeVg200",
+							"description": "token trả về khi đăng nhập",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8187/api_app/editJodEpl",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8187",
+					"path": [
+						"api_app",
+						"editJodEpl"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "quản lý chung",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiNzIiLCJlbWFpbCI6InR1YW5kZXZAZ21haWwuY29tIiwidGltZSI6MTYyMjg2MjQyNH0.ZZXNTWYPQmE9536JB3paQb0j4Z6vBw4Z7SAj7_WBEQQ",
+							"description": "token trả về khi đăng nhập",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://freelancer.timviec365.com.vn/api_app/managerEmploye",
+					"protocol": "https",
+					"host": [
+						"freelancer",
+						"timviec365",
+						"com",
+						"vn"
+					],
+					"path": [
+						"api_app",
+						"managerEmploye"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "chi tiết tin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "10",
+							"description": "id tin muốn xem chi tiết",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8187/api_app/detailJob",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8187",
+					"path": [
+						"api_app",
+						"detailJob"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "xem chi tiết ntd",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiMTg0IiwiZW1haWwiOiJscnE2NTMxNUB6d29oby5jb20iLCJvdHAiOiJYTVkyMzciLCJ0aW1lIjoxNjI0NDEyOTk3fQ.Zp9Lj7r4QwVw--eYp4DdPpkiUKH1MnsPEGfu8LJXXZY",
+							"type": "text"
+						},
+						{
+							"key": "id",
+							"value": "122",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://freelancer.timviec365.com.vn/api_app/SeenDetailEpl",
+					"protocol": "https",
+					"host": [
+						"freelancer",
+						"timviec365",
+						"com",
+						"vn"
+					],
+					"path": [
+						"api_app",
+						"SeenDetailEpl"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "thông báo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiMTI0IiwiZW1haWwiOiJwaGFtbWFuaGh1bmcxMDA4QGdtYWlsLmNvbSIsIm90cCI6Ik5ONFBDNSIsInRpbWUiOjE2MjUxMTI0NjV9.WG603XQO0cojMr55h9gBJRpGaz-PwxcokTlvsCDedQs",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://freelancer.timviec365.com.vn/api_app/notify",
+					"protocol": "https",
+					"host": [
+						"freelancer",
+						"timviec365",
+						"com",
+						"vn"
+					],
+					"path": [
+						"api_app",
+						"notify"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "xóa thông báo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiMTI0IiwiZW1haWwiOiJwaGFtbWFuaGh1bmcxMDA4QGdtYWlsLmNvbSIsIm90cCI6Ik5ONFBDNSIsInRpbWUiOjE2MjUxMTI0NjV9.WG603XQO0cojMr55h9gBJRpGaz-PwxcokTlvsCDedQs",
+							"type": "text"
+						},
+						{
+							"key": "id",
+							"value": "14",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://freelancer.timviec365.com.vn/api_app/deletenotify",
+					"protocol": "https",
+					"host": [
+						"freelancer",
+						"timviec365",
+						"com",
+						"vn"
+					],
+					"path": [
+						"api_app",
+						"deletenotify"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "xóa flc đã lưu",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiMTI0IiwiZW1haWwiOiJwaGFtbWFuaGh1bmcxMDA4QGdtYWlsLmNvbSIsIm90cCI6IkZTQTlVNCIsInRpbWUiOjE2MjUxMjQ4MDN9.XP0og7jU6jXnlSN_1KiFVvmDLw73UHlk_tzIctlpPHA",
+							"type": "text"
+						},
+						{
+							"key": "id",
+							"value": "123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://freelancer.timviec365.com.vn/api_app/delete_flc_saved",
+					"protocol": "https",
+					"host": [
+						"freelancer",
+						"timviec365",
+						"com",
+						"vn"
+					],
+					"path": [
+						"api_app",
+						"delete_flc_saved"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	]
+}
